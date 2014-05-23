@@ -1,0 +1,192 @@
+@import 'foundation';
+
+.off-canvas-wrap {
+
+    &.move-left {
+    
+    }
+
+    .dock-menu-icon {
+        text-align: right;
+        display: block;
+        color: white;
+        position: absolute;
+        z-index: 8;
+        right: 0;
+        top: rem-calc(20);
+        font-size: rem-calc(40);
+        background: rgba(24,24,24,0.4);
+        padding: rem-calc(4) rem-calc(5) 0 rem-calc(16);
+        border-radius: rem-calc(32) 0 0 rem-calc(32);
+    }
+    
+    .dock-menu {
+        background: white;
+        box-shadow: none;
+        padding-right: rem-calc(20);
+        
+        ul {
+            padding-right: rem-calc(20);
+            
+            li {
+                list-style-type: none;
+                padding: rem-calc(15) 0;
+                border-bottom: rem-calc(1) solid gray;
+            }
+        }
+    }
+    
+    .exit-off-canvas {
+        box-shadow: none;
+    }
+}
+
+.str-main-content-wrapper {
+    .str-main-content {
+    
+        .str-hero {
+            background: url('http://meghasandesh.net/hale/OrangeJuice_c640.jpg') no-repeat;
+            background-position: 0 0;
+            box-sizing: content-box;
+            width: 100%;
+            margin-bottom: rem-calc(4);
+            min-height: rem-calc(240);
+            
+            @media #{$medium-up} {
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-position: center;
+                padding-bottom: 15%;
+            }           
+        }
+        
+        .str-content-hero {
+            max-height: rem-calc(400);
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        
+            .str-content-hero-wrapper {
+                background-image: url('http://meghasandesh.net/hale/herbs-2.jpg'); /* fallback */
+                background-image: url('http://meghasandesh.net/hale/herbs-2.jpg');
+                background-image: url('http://meghasandesh.net/hale/herbs-2.jpg'); 
+                background-image: url('http://meghasandesh.net/hale/herbs-2.jpg'); 
+                background-image: url('http://meghasandesh.net/hale/herbs-2.jpg'); 
+                padding-bottom: 100%;
+                background-size: cover;
+                
+                @media #{$medium-up} {
+                    background-size: contain;
+                }
+                background-repeat: no-repeat;
+                
+                &:before {
+                    content: " ";
+                    position: absolute;
+                    z-index: 2;
+                    background: -webkit-linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,1));
+                    background: -moz-linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,1));
+                    background: -ms-linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,1));
+                    background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,1));
+                    width: 100%;
+                    height: rem-calc(400);
+                }
+            }
+            
+            h1 {
+                position: absolute;
+                bottom: 2%;
+                left: rem-calc(20);
+                z-index: 6;
+            }
+        }
+        
+        .str-strip-template { display: none; }
+        
+        .str-strip-list {
+            @include block-grid(2);
+            
+            @media #{$medium-up} { @include block-grid(3); }
+            @media #{$xlarge-up} { @include block-grid(4); }
+            @media #{$landscape} { @include block-grid(4); }
+            
+            .str-strip {
+            
+                clear: both;
+                padding: 0 rem-calc(2) rem-calc(4) rem-calc(2) !important;
+                position: relative;
+                overflow: hidden;
+                border: rem-calc(2) solid white;
+                
+                &:before {
+                    content: "";
+                    display: block;
+                    padding-top: 100%;
+                }
+                
+                &:first-of-type {
+                    padding-left: 0;
+                }
+                
+                &:last-of-type {
+                    padding-right: 0;
+                }
+            
+                .x-strip-wrapper {
+                
+                    position: absolute;
+                    top: 0;
+                    min-width: rem-calc(1200);
+                
+                    img {
+                        width: 100%;
+                        position: relative;
+                        left: rem-calc(-50);
+                        top: rem-calc(-48);
+                    }
+                    
+                    .tile-title {
+                        position: absolute;
+                        bottom: 0;
+                        z-index: 2;
+                        height: rem-calc(64);
+                        overflow: hidden;
+                        
+                        &:before {
+                            background: linear-gradient(rgba(24,24,24,0), rgba(24,24,24,0.5));
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            content: " ";
+                            display: block;
+                            z-index: 3;
+                            min-height: rem-calc(64);
+                            margin-top: rem-calc(-4);
+                        }
+                        
+                        img {
+                            -webkit-filter: blur(5px);
+                            -moz-filter: blur(5px);
+                            filter: blur(5px);
+                            margin-top: rem-calc(-240);
+                            width: 100%;
+                            
+                        }
+                        
+                        .title-text {
+                            color: white;
+                            top: rem-calc(6);
+                            left: rem-calc(10);
+                            position: absolute;
+                            font-size: rem-calc(32);
+                            z-index: 5;
+                            font-weight: 200;
+                        }
+                    }
+                }
+            }           
+        }
+    }
+}

@@ -1,0 +1,151 @@
+div.dailySegment {
+	width: 450px;
+	height: 402px;
+	background-position: -7px 0;
+	float: left;
+	cursor: pointer;
+	background-size: 1350px;
+	margin: 0 10px;
+}
+
+div.dailySegment:nth-child(4n),div.dailySegment:first-child, div.dailySegment:nth-child(4n+1) {
+	margin:0;	
+}
+
+div.dailySegmentLabel {
+	background: rgba(255,102,51, 0.8);
+	color: #FFF;
+    padding: 15px;
+    position: relative;
+    top: 330px;
+    height: 45px;
+    width: 420px;
+	font-size: 32px;
+	font-family: sans-serif;
+}
+
+.portraitContainer {
+	width: 920px;
+	margin: 0 auto;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+div.segment {
+	width: 900px;
+	height: 801px;
+	background-size: 2700px;
+}
+
+#segment1 {
+	background-position: -15px 0;
+}
+
+#segment2 {
+	background-position: -900px 0;
+}
+
+#segment3 {
+	background-position: -1785px 0;
+}
+
+#comicStrip {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.bottomBarIcon {
+	position: fixed;
+	resize: none;
+	visibility: hidden;
+}
+
+#appIcon {
+	bottom: 0;
+	left: 0;
+}
+
+#calendarIcon {
+	bottom: 275px;
+	left: 10px;
+}
+
+#favoritesIcon {
+	bottom: 175px;
+	left: 200px;
+}
+
+#favorited {
+	bottom: 20px;
+	right: 20px;
+}
+
+.weekdaySegment {
+	width: 1800px;
+	height: 534px;
+	background-size: 1800px 534px;
+	margin-top:200px;
+}
+
+.landscapeContainer {
+	width: 1840px;
+	margin: 0 auto;
+}
+
+header {
+	width: 100%;
+	height: 200px;
+	background: url('../images/headerBg.png');
+	position: fixed;
+	top: 0;
+	z-index: 500;
+}
+
+header p {
+	text-align: center;
+	margin-top: 48px;
+}
+
+header a {
+	font-family: Calibri, sans-serif;
+	font-size: 72px;
+	text-decoration: none;
+	color: #FFF;
+	border: 3px solid #FFF;
+	padding: 20px 30px;
+}
+
+header a:first-child{
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	-moz-border-radius-topleft: 20px;
+	-webkit-border-radius-bottomleft: 20px;
+	-moz-border-radius-topleft: 20px;
+	-webkit-border-radius-bottomleft: 20px;
+	margin-right: -5px;
+}
+
+header a:last-child  {
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	-moz-border-radius-topright: 20px;
+	-webkit-border-radius-bottomright: 20px;
+	-moz-border-radius-topright: 20px;
+	-webkit-border-radius-bottomright: 20px;
+	margin-left: -5px;
+}
+
+#comicCarousel, #favCarousel {
+	margin-top: 200px;
+}
+
+.stripHeader {
+	visibility: hidden;
+}
+
+.selected {
+	background: rgba(255,102,51, 0.8);
+}
