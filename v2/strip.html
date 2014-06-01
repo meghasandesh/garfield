@@ -1,0 +1,59 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Garfield</title>
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/foundation.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
+</head>
+<body>
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+        <a class="right-off-canvas-toggle dock-menu-icon"><span class="icon-list2"></span></a>
+        <aside class="right-off-canvas-menu dock-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">My Subscriptions</a></li>
+              <li><a href="#">Top News</a></li>
+              <li><a href="#">Profile</a></li>
+            </ul>
+        </aside>
+        <section class="str-main-content-wrapper main-section">
+            <section class="str-main-content">
+                <section class="str-comic-strip">
+                    <section class="str-landscape-strip">
+                        <div class="x-strip-container">
+                            <img>
+                        </div>
+                    </section>
+                    <section class="str-portrait-strip">
+                        <div class="x-strip-container">
+                            <img>
+                        </div>
+                        <div class="x-strip-container segment-2">
+                            <img>
+                        </div>
+                        <div class="x-strip-container segment-3">
+                            <img>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/foundation.min.js"></script>
+        <script src="js/app.js"></script>
+        <script>
+            $(document).ready(function() {
+                showComicStrip();
+            });
+        </script>
+        <a class="exit-off-canvas"></a>
+	</div>
+</div>
+</body>
+</html>

@@ -7,7 +7,19 @@ function zeroFormat (d) {
 	return ( d.toString().length == 1 ? ("0" + "" + d ) : d );
 }
 
+function loadComicStrip(e) {
+	var stripName = $(this).find('img').attr('data-strip');
+    window.location.assign('strip.html?strip='+stripName);
+}
+
+function showComicStrip() {
+    var urlPieces = window.location.toString().split('=');
+    $('.str-landscape-strip .x-strip-container img').attr('src', baseURL + urlPieces[1] + fileFormat);
+    $('.str-portrait-strip .x-strip-container img').attr('src', baseURL + urlPieces[1] + fileFormat);
+}
+
 function loadComicCarousel(startup) {
+
 	var dayDecrement;
 	if(startup || !localStorage.getItem( 'dayDecrement')) {
 			//seconds per day. need to convert to miliseconds, but storing in seconds for compactness
@@ -27,15 +39,16 @@ function loadComicCarousel(startup) {
 		//$(this).css("background-image",'url("'+comicStripURL+'")');
 		//$(".dailySegmentLabel", this).html((dateToLoad.getMonth()+1)+"/"+dateToLoad.getDate()+"/"+dateToLoad.getFullYear().toString().substring(2,4));
 		//$(this).attr("name",comicStripURL);
-		//$(this).on("click",loadComicStrip);
 		//$(this).removeClass('unloaded');
 		//add a day
 		dayDecrement = Number(dayDecrement+86400);
         localStorage.setItem( 'dayDecrement' , dayDecrement );
         
-        strip.find('img').attr('src', comicStripURL);
+        strip.find('img').attr('src', comicStripURL)
+                         .attr('data-strip', stripName);
         strip.attr('class','str-strip');
-        strip.appendTo('.str-strip-list');
+        strip.on("click",loadComicStrip);
+		strip.appendTo('.str-strip-list');
     }
 }
 

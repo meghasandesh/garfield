@@ -145,6 +145,16 @@
                         position: relative;
                         left: rem-calc(-50);
                         top: rem-calc(-48);
+                        
+                        @media #{$xlarge-up} {
+                            width: 125%;
+                            max-width: none;
+                        }
+                        
+                        @media #{$xxlarge-up} {
+                            width: 150%;
+                            max-width: none;
+                        }
                     }
                     
                     .tile-title {
@@ -187,6 +197,68 @@
                     }
                 }
             }           
+        }
+        
+        .str-comic-strip {
+        
+            @media #{$portrait} { width: 50%; }
+            
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            
+            .str-landscape-strip {
+            
+                position: fixed;
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                           
+                @media #{$portrait} { display: none; }
+                
+                img { 
+                    width: 105%; 
+                    position: relative;
+                    left: -2%;
+                    max-width: none;
+                }
+                
+            }
+            
+            .str-portrait-strip {
+            
+                @media #{$landscape} { display: none; }
+            
+                .x-strip-container {
+                
+                    img {
+                        width: 300%;
+                        max-width: none;
+                        position: relative;
+                        left: -4%;
+                    }
+                    
+                    &.segment-2, &.segment-3 {
+                        margin-top: -8%;
+                    }
+                        
+                    &.segment-2 {
+                        width: 104%;
+                        
+                        img { 
+                            left: -101%;                         
+                        }
+                    }
+                    
+                    &.segment-3 {
+                        img { left: -194%; }
+                    }
+                }
+            }
         }
     }
 }

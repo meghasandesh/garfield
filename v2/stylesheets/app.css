@@ -9285,7 +9285,21 @@ th.hide-for-touch {
   left: -3.125rem;
   top: -3rem;
 }
-/* line 150, ../sass/app.scss */
+@media only screen and (min-width: 64.063em) {
+  /* line 143, ../sass/app.scss */
+  .str-main-content-wrapper .str-main-content .str-strip-list .str-strip .x-strip-wrapper img {
+    width: 125%;
+    max-width: none;
+  }
+}
+@media only screen and (min-width: 120.063em) {
+  /* line 143, ../sass/app.scss */
+  .str-main-content-wrapper .str-main-content .str-strip-list .str-strip .x-strip-wrapper img {
+    width: 150%;
+    max-width: none;
+  }
+}
+/* line 160, ../sass/app.scss */
 .str-main-content-wrapper .str-main-content .str-strip-list .str-strip .x-strip-wrapper .tile-title {
   position: absolute;
   bottom: 0;
@@ -9293,7 +9307,7 @@ th.hide-for-touch {
   height: 4rem;
   overflow: hidden;
 }
-/* line 157, ../sass/app.scss */
+/* line 167, ../sass/app.scss */
 .str-main-content-wrapper .str-main-content .str-strip-list .str-strip .x-strip-wrapper .tile-title:before {
   background: linear-gradient(rgba(24, 24, 24, 0), rgba(24, 24, 24, 0.5));
   width: 100%;
@@ -9305,7 +9319,7 @@ th.hide-for-touch {
   min-height: 4rem;
   margin-top: -0.25rem;
 }
-/* line 169, ../sass/app.scss */
+/* line 179, ../sass/app.scss */
 .str-main-content-wrapper .str-main-content .str-strip-list .str-strip .x-strip-wrapper .tile-title img {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -9313,7 +9327,7 @@ th.hide-for-touch {
   margin-top: -15rem;
   width: 100%;
 }
-/* line 178, ../sass/app.scss */
+/* line 188, ../sass/app.scss */
 .str-main-content-wrapper .str-main-content .str-strip-list .str-strip .x-strip-wrapper .tile-title .title-text {
   color: white;
   top: 0.375rem;
@@ -9322,4 +9336,69 @@ th.hide-for-touch {
   font-size: 2rem;
   z-index: 5;
   font-weight: 200;
+}
+/* line 202, ../sass/app.scss */
+.str-main-content-wrapper .str-main-content .str-comic-strip {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media only screen and (orientation: portrait) {
+  /* line 202, ../sass/app.scss */
+  .str-main-content-wrapper .str-main-content .str-comic-strip {
+    width: 50%;
+  }
+}
+/* line 210, ../sass/app.scss */
+.str-main-content-wrapper .str-main-content .str-comic-strip .str-landscape-strip {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media only screen and (orientation: portrait) {
+  /* line 210, ../sass/app.scss */
+  .str-main-content-wrapper .str-main-content .str-comic-strip .str-landscape-strip {
+    display: none;
+  }
+}
+/* line 223, ../sass/app.scss */
+.str-main-content-wrapper .str-main-content .str-comic-strip .str-landscape-strip img {
+  width: 105%;
+  position: relative;
+  left: -2%;
+  max-width: none;
+}
+@media only screen and (orientation: landscape) {
+  /* line 232, ../sass/app.scss */
+  .str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip {
+    display: none;
+  }
+}
+/* line 238, ../sass/app.scss */
+.str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container img {
+  width: 300%;
+  max-width: none;
+  position: relative;
+  left: -4%;
+}
+/* line 245, ../sass/app.scss */
+.str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container.segment-2, .str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container.segment-3 {
+  margin-top: -8%;
+}
+/* line 249, ../sass/app.scss */
+.str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container.segment-2 {
+  width: 104%;
+}
+/* line 252, ../sass/app.scss */
+.str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container.segment-2 img {
+  left: -101%;
+}
+/* line 258, ../sass/app.scss */
+.str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container.segment-3 img {
+  left: -194%;
 }
