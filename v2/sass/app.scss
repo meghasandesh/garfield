@@ -207,6 +207,18 @@
             margin: 0 auto;
             overflow: hidden;
             
+            &.x-sunday-strip {
+                .str-portrait-strip { display: none; }
+                
+                .str-landscape-strip { 
+                    img {
+                        left: -3%;
+                    }
+                    
+                    @media #{$portrait} { display: block; }
+                }
+            }
+            
             .str-landscape-strip {
             
                 position: fixed;

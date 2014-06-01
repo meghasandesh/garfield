@@ -9349,7 +9349,21 @@ th.hide-for-touch {
     width: 50%;
   }
 }
-/* line 210, ../sass/app.scss */
+/* line 211, ../sass/app.scss */
+.str-main-content-wrapper .str-main-content .str-comic-strip.x-sunday-strip .str-portrait-strip {
+  display: none;
+}
+/* line 214, ../sass/app.scss */
+.str-main-content-wrapper .str-main-content .str-comic-strip.x-sunday-strip .str-landscape-strip img {
+  left: -3%;
+}
+@media only screen and (orientation: portrait) {
+  /* line 213, ../sass/app.scss */
+  .str-main-content-wrapper .str-main-content .str-comic-strip.x-sunday-strip .str-landscape-strip {
+    display: block;
+  }
+}
+/* line 222, ../sass/app.scss */
 .str-main-content-wrapper .str-main-content .str-comic-strip .str-landscape-strip {
   position: fixed;
   width: 100%;
@@ -9361,12 +9375,12 @@ th.hide-for-touch {
   transform: translate(-50%, -50%);
 }
 @media only screen and (orientation: portrait) {
-  /* line 210, ../sass/app.scss */
+  /* line 222, ../sass/app.scss */
   .str-main-content-wrapper .str-main-content .str-comic-strip .str-landscape-strip {
     display: none;
   }
 }
-/* line 223, ../sass/app.scss */
+/* line 235, ../sass/app.scss */
 .str-main-content-wrapper .str-main-content .str-comic-strip .str-landscape-strip img {
   width: 105%;
   position: relative;
@@ -9374,31 +9388,31 @@ th.hide-for-touch {
   max-width: none;
 }
 @media only screen and (orientation: landscape) {
-  /* line 232, ../sass/app.scss */
+  /* line 244, ../sass/app.scss */
   .str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip {
     display: none;
   }
 }
-/* line 238, ../sass/app.scss */
+/* line 250, ../sass/app.scss */
 .str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container img {
   width: 300%;
   max-width: none;
   position: relative;
   left: -4%;
 }
-/* line 245, ../sass/app.scss */
+/* line 257, ../sass/app.scss */
 .str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container.segment-2, .str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container.segment-3 {
   margin-top: -8%;
 }
-/* line 249, ../sass/app.scss */
+/* line 261, ../sass/app.scss */
 .str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container.segment-2 {
   width: 104%;
 }
-/* line 252, ../sass/app.scss */
+/* line 264, ../sass/app.scss */
 .str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container.segment-2 img {
   left: -101%;
 }
-/* line 258, ../sass/app.scss */
+/* line 270, ../sass/app.scss */
 .str-main-content-wrapper .str-main-content .str-comic-strip .str-portrait-strip .x-strip-container.segment-3 img {
   left: -194%;
 }

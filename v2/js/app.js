@@ -9,13 +9,18 @@ function zeroFormat (d) {
 
 function loadComicStrip(e) {
 	var stripName = $(this).find('img').attr('data-strip');
-    window.location.assign('strip.html?strip='+stripName);
+    var isSunday = $(this).attr('data-sunday-strip');
+    window.location.assign('strip.html?'+'sundaystrip='+isSunday+'&strip='+stripName);
 }
 
 function showComicStrip() {
     var urlPieces = window.location.toString().split('=');
-    $('.str-landscape-strip .x-strip-container img').attr('src', baseURL + urlPieces[1] + fileFormat);
-    $('.str-portrait-strip .x-strip-container img').attr('src', baseURL + urlPieces[1] + fileFormat);
+    var isSunday = urlPieces[1].split('&')[0];
+    if(isSunday === "true") {
+        $('.str-comic-strip').addClass('x-sunday-strip');
+    }
+    $('.str-landscape-strip .x-strip-container img').attr('src', baseURL + urlPieces[2] + fileFormat);
+    $('.str-portrait-strip .x-strip-container img').attr('src', baseURL + urlPieces[2] + fileFormat);
 }
 
 function loadComicCarousel(startup) {
@@ -34,6 +39,7 @@ function loadComicCarousel(startup) {
         var year, month, day;
 		
 		var dateToLoad = new Date(dateObj.getTime() - (dayDecrement*1000));
+        var isSunday = dateToLoad.getDay() == 0 ? 'true' : 'false';
 		var stripName = dateToLoad.getFullYear() + "-" + ( zeroFormat(dateToLoad.getMonth() + 1) ) + "-" + zeroFormat(dateToLoad.getDate());
 		comicStripURL = baseURL + stripName + fileFormat;
 		//$(this).css("background-image",'url("'+comicStripURL+'")');
@@ -44,6 +50,7 @@ function loadComicCarousel(startup) {
 		dayDecrement = Number(dayDecrement+86400);
         localStorage.setItem( 'dayDecrement' , dayDecrement );
         
+        strip.attr('data-sunday-strip', isSunday);
         strip.find('img').attr('src', comicStripURL)
                          .attr('data-strip', stripName);
         strip.attr('class','str-strip');
